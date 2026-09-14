@@ -3,8 +3,8 @@
   \****************************************************************************************************************************************************************************************************************************************************************/
 .wp-block-hawthorn-coaching-pathways {
   --coaching-pathways-gap: clamp(1.25rem, 3vw, 3rem);
-  --coaching-pathways-line: var(--wp--preset--color--accent);
-  --coaching-pathways-panel: var(--wp--preset--gradient--white);
+  --coaching-pathways-line: var(--wp--preset--color--primary);
+  --coaching-pathways-panel: var(--wp--preset--color--neutral);
   color: var(--wp--preset--color--text);
 }
 
@@ -57,17 +57,14 @@
   display: flex;
   flex-direction: column;
   padding: clamp(1.5rem, 4vw, 3rem);
-  border: solid 2px var(--coaching-pathways-line);
 }
 
 .coaching-pathways__eyebrow {
-  color: var(--wp--preset--color--accent);
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   line-height: 1.3;
   margin: 0 0 0.75rem;
-  text-transform: uppercase;
 }
 
 .coaching-pathways__heading {

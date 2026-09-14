@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "hawthorn/starter",
+  "version": "1.0.0",
+  "title": "Hawthorn Starter",
+  "category": "design",
+  "icon": "welcome-add-page",
+  "description": "A starter block for new Hawthorn child-theme blocks.",
+  "keywords": [
+    "hawthorn",
+    "starter"
+  ],
+  "textdomain": "hawthorn",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2",
+      "default": "A Hawthorn block"
+    },
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "p",
+      "default": "Edit this starter block to build something new."
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "html": false
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

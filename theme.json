@@ -20,17 +20,32 @@
                     "color": "#A09E77"
                 },
                 {
+                    "name": "Soft Blue",
+                    "slug": "accent-2",
+                    "color": "#5C688A"
+                },
+                {
                     "name": "Beige",
                     "slug": "neutral",
                     "color": "#D9D4C9"
                 },
                 {
-                    "name": "Light",
+                    "name": "Background",
+                    "slug": "background",
+                    "color": "#E7E2DE"
+                },
+                {
+                    "name": "Text",
+                    "slug": "text",
+                    "color": "#1f2c39"
+                },
+                {
+                    "name": "Light (Legacy)",
                     "slug": "light",
                     "color": "#E7E2DE"
                 },
                 {
-                    "name": "Dark",
+                    "name": "Dark (Legacy)",
                     "slug": "black",
                     "color": "#1f2c39"
                 },
@@ -38,6 +53,11 @@
                     "name": "White",
                     "slug": "white",
                     "color": "#FFFFFF"
+                },
+                {
+                    "name": "Transparent",
+                    "slug": "transparent",
+                    "color": "transparent"
                 }
             ],
             "defaultPalette": false,
@@ -159,8 +179,8 @@
     },
     "styles": {
         "color": {
-            "background": "var(--wp--preset--color--light)",
-            "text": "var(--wp--preset--color--black)"
+            "background": "var(--wp--preset--color--background)",
+            "text": "var(--wp--preset--color--text)"
         },
         "typography": {
             "fontFamily": "var(--wp--preset--font-family--body)",
@@ -174,7 +194,7 @@
             "button": {
                 "color": {
                     "background": "var(--wp--preset--color--accent)",
-                    "text": "var(--wp--preset--color--background)"
+                    "text": "var(--wp--preset--color--text)"
                 },
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--body)",

@@ -12,11 +12,12 @@ Text Domain: hawthorn
 */
 
 body {
-    background-color: var(--wp--preset--color--light) !important;
+    background-color: var(--wp--preset--color--background) !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500 !important;
+    line-height: 1;
 }
 
 h3 {
@@ -295,6 +296,10 @@ img {
 
 /* Enigma Overrides */
 
+.header-centered__menu a {
+    font-family: var(--wp--preset--font-family--body);
+}
+
 .header-centered__menu a:hover {
     color: var(--wp--preset--color--accent) !important;
 
@@ -327,7 +332,7 @@ img {
 
 .footer-bottom p {
     font-size: 16px;
-    color: var(--wp--preset--color--dark);
+    color: var(--wp--preset--color--text);
 }
 
 /* .landing-hero {
@@ -355,7 +360,7 @@ img {
     color: var(--wp--preset--color--primary) !important; */
 
     /* background: #293c4e !important; */
-    color: var(--wp--preset--color--dark) !important;
+    color: var(--wp--preset--color--text) !important;
     /* color: #ffffff !important; */
     border: solid 2px #acaa7d;
 }

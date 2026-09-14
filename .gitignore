@@ -1,0 +1,5 @@
+/node_modules/
+.DS_Store
+npm-debug.log*
+
+# Keep /build in Git so the theme works without Node on the server.

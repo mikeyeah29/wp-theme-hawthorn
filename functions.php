@@ -72,3 +72,28 @@ add_action( 'init', function () {
         )
     );
 } );
+
+/**
+ * Register blocks built by the Hawthorn child theme.
+ *
+ * `npm run build` creates both the compiled block assets and the metadata
+ * manifest used here. The fallback keeps registration working on WordPress
+ * versions that predate block metadata collections.
+ */
+function hawthorn_register_blocks() {
+	$build_dir  = get_stylesheet_directory() . '/build';
+	$blocks_dir = $build_dir . '/blocks';
+	$manifest   = $build_dir . '/blocks-manifest.php';
+
+	if ( file_exists( $manifest ) && function_exists( 'wp_register_block_types_from_metadata_collection' ) ) {
+		wp_register_block_types_from_metadata_collection( $blocks_dir, $manifest );
+		return;
+	}
+
+	$block_json_files = glob( $blocks_dir . '/*/block.json' );
+
+	foreach ( $block_json_files ?: array() as $block_json ) {
+		register_block_type( $block_json );
+	}
+}
+add_action( 'init', 'hawthorn_register_blocks' );

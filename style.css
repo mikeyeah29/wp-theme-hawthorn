@@ -485,3 +485,8 @@ img {
     border: 1px solid #d63638;
     color: #d63638;
 }
+
+.wp-block-breadcrumbs li,
+.wp-block-breadcrumbs ol {
+    justify-content: center !important;
+}

@@ -1,9 +1,47 @@
 .wp-block-hawthorn-coaching-pathways {
 	--coaching-pathways-gap: clamp(1.25rem, 3vw, 3rem);
 	--coaching-pathways-line: var(--wp--preset--color--accent);
-	--coaching-pathways-panel: var(--wp--preset--color--white);
+	// --coaching-pathways-panel: var(--wp--preset--gradient--sage-glow);
+	--coaching-pathways-panel: var(--wp--preset--gradient--white);
 
-	color: var(--wp--preset--color--black);
+	color: var(--wp--preset--color--text);
+}
+
+.coaching-pathways--inner-blocks {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0 var(--coaching-pathways-gap);
+}
+
+.coaching-pathways__panel--bottom {
+	margin: 0 auto;
+	max-width: calc((100% - var(--coaching-pathways-gap)) / 2);
+	text-align: center;
+}
+
+.coaching-pathways--inner-blocks > .coaching-pathways__panel--left,
+.coaching-pathways--inner-blocks > .coaching-pathways__panel--right {
+	grid-row: 1;
+}
+
+.coaching-pathways--inner-blocks > .coaching-pathways__connector-block {
+	grid-column: 1 / -1;
+	grid-row: 2;
+}
+
+.coaching-pathways--inner-blocks > .coaching-pathways__panel--bottom {
+	grid-column: 1 / -1;
+	grid-row: 3;
+}
+
+.coaching-pathways--inner-blocks .coaching-pathways__panel > .wp-block-buttons {
+	margin-top: auto;
+	margin-bottom: 0;
+}
+
+.coaching-pathways--inner-blocks .coaching-pathways__panel > .wp-block-buttons,
+.coaching-pathways--inner-blocks .coaching-pathways__panel > .block-list-appender {
+	width: 100%;
 }
 
 .coaching-pathways__top {
@@ -18,6 +56,7 @@
 	display: flex;
 	flex-direction: column;
 	padding: clamp(1.5rem, 4vw, 3rem);
+	border: solid 2px var(--coaching-pathways-line);
 }
 
 .coaching-pathways__eyebrow {
@@ -71,13 +110,23 @@
 	vector-effect: non-scaling-stroke;
 }
 
-.coaching-pathways__panel--bottom {
-	margin: 0 auto;
-	max-width: calc((100% - var(--coaching-pathways-gap)) / 2);
-	text-align: center;
-}
-
 @media (max-width: 700px) {
+
+	.coaching-pathways--inner-blocks {
+		grid-template-columns: 1fr;
+	}
+
+	.coaching-pathways__panel--bottom {
+		max-width: none;
+	}
+
+	.coaching-pathways--inner-blocks > .coaching-pathways__panel--left,
+	.coaching-pathways--inner-blocks > .coaching-pathways__panel--right,
+	.coaching-pathways--inner-blocks > .coaching-pathways__connector-block,
+	.coaching-pathways--inner-blocks > .coaching-pathways__panel--bottom {
+		grid-column: 1;
+		grid-row: auto;
+	}
 
 	.coaching-pathways__top {
 		grid-template-columns: 1fr;
@@ -103,7 +152,4 @@
 		width: 2px;
 	}
 
-	.coaching-pathways__panel--bottom {
-		max-width: none;
-	}
 }

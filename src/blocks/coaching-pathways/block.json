@@ -1,92 +1,92 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 3,
-  "name": "hawthorn/coaching-pathways",
-  "version": "1.0.0",
-  "title": "Coaching Pathways",
-  "category": "design",
-  "icon": "networking",
-  "description": "Two coaching pathways that converge on a shared next step.",
-  "keywords": ["coaching", "pathways", "services"],
-  "textdomain": "hawthorn",
-  "attributes": {
-    "leftEyebrow": {
-      "type": "string",
-      "source": "html",
-      "selector": ".coaching-pathways__panel--left .coaching-pathways__eyebrow",
-      "default": "For individuals"
-    },
-    "leftHeading": {
-      "type": "string",
-      "source": "html",
-      "selector": ".coaching-pathways__panel--left .coaching-pathways__heading",
-      "default": "One-to-one coaching"
-    },
-    "leftContent": {
-      "type": "string",
-      "source": "html",
-      "selector": ".coaching-pathways__panel--left .coaching-pathways__content",
-      "default": "Create space to think, grow and move forward with focused personal support."
-    },
-    "leftButtonText": {
-      "type": "string",
-      "source": "html",
-      "selector": ".coaching-pathways__panel--left .coaching-pathways__button",
-      "default": "Explore individual coaching"
-    },
-    "leftButtonUrl": {
-      "type": "string",
-      "default": ""
-    },
-    "rightEyebrow": {
-      "type": "string",
-      "source": "html",
-      "selector": ".coaching-pathways__panel--right .coaching-pathways__eyebrow",
-      "default": "For organisations"
-    },
-    "rightHeading": {
-      "type": "string",
-      "source": "html",
-      "selector": ".coaching-pathways__panel--right .coaching-pathways__heading",
-      "default": "Team and leadership coaching"
-    },
-    "rightContent": {
-      "type": "string",
-      "source": "html",
-      "selector": ".coaching-pathways__panel--right .coaching-pathways__content",
-      "default": "Strengthen leadership, relationships and performance across your organisation."
-    },
-    "rightButtonText": {
-      "type": "string",
-      "source": "html",
-      "selector": ".coaching-pathways__panel--right .coaching-pathways__button",
-      "default": "Explore organisational coaching"
-    },
-    "rightButtonUrl": {
-      "type": "string",
-      "default": ""
-    },
-    "bottomHeading": {
-      "type": "string",
-      "source": "html",
-      "selector": ".coaching-pathways__panel--bottom .coaching-pathways__heading",
-      "default": "Not sure where to begin?"
-    },
-    "bottomContent": {
-      "type": "string",
-      "source": "html",
-      "selector": ".coaching-pathways__panel--bottom .coaching-pathways__content",
-      "default": "Let’s find the coaching pathway that best fits where you are and where you want to go."
-    }
-  },
-  "supports": {
-    "align": ["wide", "full"],
-    "spacing": {
-      "margin": true
-    },
-    "html": false
-  },
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hawthorn/coaching-pathways",
+	"version": "1.0.0",
+	"title": "Coaching Pathways",
+	"category": "design",
+	"icon": "networking",
+	"description": "Two coaching pathways that converge on a shared next step.",
+	"keywords": [ "coaching", "pathways", "services" ],
+	"textdomain": "hawthorn",
+	"attributes": {
+		"leftEyebrow": {
+			"type": "string",
+			"source": "html",
+			"selector": ".coaching-pathways__panel--left .coaching-pathways__eyebrow",
+			"default": "For individuals"
+		},
+		"leftHeading": {
+			"type": "string",
+			"source": "html",
+			"selector": ".coaching-pathways__panel--left .coaching-pathways__heading",
+			"default": "One-to-one coaching"
+		},
+		"leftContent": {
+			"type": "string",
+			"source": "html",
+			"selector": ".coaching-pathways__panel--left .coaching-pathways__content",
+			"default": "Create space to think, grow and move forward with focused personal support."
+		},
+		"leftButtonText": {
+			"type": "string",
+			"source": "html",
+			"selector": ".coaching-pathways__panel--left .coaching-pathways__button",
+			"default": "Explore individual coaching"
+		},
+		"leftButtonUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"rightEyebrow": {
+			"type": "string",
+			"source": "html",
+			"selector": ".coaching-pathways__panel--right .coaching-pathways__eyebrow",
+			"default": "For organisations"
+		},
+		"rightHeading": {
+			"type": "string",
+			"source": "html",
+			"selector": ".coaching-pathways__panel--right .coaching-pathways__heading",
+			"default": "Team and leadership coaching"
+		},
+		"rightContent": {
+			"type": "string",
+			"source": "html",
+			"selector": ".coaching-pathways__panel--right .coaching-pathways__content",
+			"default": "Strengthen leadership, relationships and performance across your organisation."
+		},
+		"rightButtonText": {
+			"type": "string",
+			"source": "html",
+			"selector": ".coaching-pathways__panel--right .coaching-pathways__button",
+			"default": "Explore organisational coaching"
+		},
+		"rightButtonUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"bottomHeading": {
+			"type": "string",
+			"source": "html",
+			"selector": ".coaching-pathways__panel--bottom .coaching-pathways__heading",
+			"default": "Not sure where to begin?"
+		},
+		"bottomContent": {
+			"type": "string",
+			"source": "html",
+			"selector": ".coaching-pathways__panel--bottom .coaching-pathways__content",
+			"default": "Let’s find the coaching pathway that best fits where you are and where you want to go."
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true
+		},
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
 }

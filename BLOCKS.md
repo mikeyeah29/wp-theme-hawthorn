@@ -30,3 +30,11 @@ npm run start
 The generated `build/blocks-manifest.php` lets `functions.php` discover and
 register every compiled block automatically. Commit the `build` directory when
 deploying the theme, because production does not need Node or npm.
+
+## Coaching Pathways
+
+`hawthorn/coaching-pathways` uses a locked parent template to keep the two
+upper panels, connector, and centred lower panel in place. Each panel has its
+own unlocked InnerBlocks area, so editors can add, remove, or replace content
+blocks inside that panel. Existing attribute-based Coaching Pathways blocks
+are migrated automatically when the post is opened and saved in the editor.

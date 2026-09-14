@@ -1,15 +1,56 @@
-.wp-block-hawthorn-coaching-pathways {
+.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks > .block-editor-block-list__layout {
+	display: grid;
+	gap: 0 var(--coaching-pathways-gap);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 
-	.coaching-pathways__panel {
-		box-sizing: border-box;
+.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks {
+	grid-column: 1 / -1;
+}
+
+.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks > .block-editor-block-list__layout > .coaching-pathways__panel--left,
+.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks > .block-editor-block-list__layout > .coaching-pathways__panel--right {
+	grid-row: 1;
+}
+
+.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks > .block-editor-block-list__layout > .coaching-pathways__connector-block {
+	grid-column: 1 / -1;
+	grid-row: 2;
+}
+
+.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks > .block-editor-block-list__layout > .coaching-pathways__panel--bottom {
+	grid-column: 1 / -1;
+	grid-row: 3;
+}
+
+.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks .block-editor-block-list__layout > .block-list-appender {
+	grid-column: 1 / -1;
+}
+
+.wp-block-hawthorn-coaching-pathways .coaching-pathways__panel {
+	box-sizing: border-box;
+}
+
+.wp-block-hawthorn-coaching-pathways .coaching-pathways__button {
+	cursor: text;
+}
+
+.wp-block-hawthorn-coaching-pathways .coaching-pathways__button:focus {
+	outline: 2px solid var(--wp-admin-theme-color);
+	outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+
+	.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		grid-template-columns: 1fr;
 	}
 
-	.coaching-pathways__button {
-		cursor: text;
-	}
-
-	.coaching-pathways__button:focus {
-		outline: 2px solid var(--wp-admin-theme-color);
-		outline-offset: 2px;
+	.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks > .block-editor-block-list__layout > .coaching-pathways__panel--left,
+	.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks > .block-editor-block-list__layout > .coaching-pathways__panel--right,
+	.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks > .block-editor-block-list__layout > .coaching-pathways__connector-block,
+	.wp-block-hawthorn-coaching-pathways.coaching-pathways--inner-blocks > .block-editor-inner-blocks > .block-editor-block-list__layout > .coaching-pathways__panel--bottom {
+		grid-column: 1;
+		grid-row: auto;
 	}
 }

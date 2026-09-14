@@ -1,1 +1,17 @@
-.wp-block-hawthorn-starter{background:var(--wp--preset--color--white);border-right:4px solid var(--wp--preset--color--accent);border-radius:4px;padding:var(--wp--preset--spacing--xs)}.hawthorn-starter__heading{margin-top:0}.hawthorn-starter__content{margin-bottom:0}
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/starter/style.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+.wp-block-hawthorn-starter {
+  background: var(--wp--preset--color--white);
+  border-right: 4px solid var(--wp--preset--color--accent);
+  border-radius: 4px;
+  padding: var(--wp--preset--spacing--xs);
+}
+
+.hawthorn-starter__heading {
+  margin-top: 0;
+}
+
+.hawthorn-starter__content {
+  margin-bottom: 0;
+}

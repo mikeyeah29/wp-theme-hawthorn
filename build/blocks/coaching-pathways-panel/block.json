@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "hawthorn/coaching-pathways-panel",
+  "version": "1.0.0",
+  "title": "Coaching Pathway Panel",
+  "category": "design",
+  "icon": "screenoptions",
+  "description": "An editable panel within a coaching pathways block.",
+  "parent": [
+    "hawthorn/coaching-pathways"
+  ],
+  "attributes": {
+    "position": {
+      "type": "string",
+      "default": "left"
+    }
+  },
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:./index.js"
+}

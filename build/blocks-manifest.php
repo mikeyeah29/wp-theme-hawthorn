@@ -100,6 +100,48 @@ return array(
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css'
 	),
+	'coaching-pathways-connector' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'hawthorn/coaching-pathways-connector',
+		'version' => '1.0.0',
+		'title' => 'Coaching Pathways Connector',
+		'category' => 'design',
+		'icon' => 'minus',
+		'description' => 'The visual connector between coaching pathway panels.',
+		'parent' => array(
+			'hawthorn/coaching-pathways'
+		),
+		'supports' => array(
+			'html' => false,
+			'reusable' => false
+		),
+		'editorScript' => 'file:./index.js'
+	),
+	'coaching-pathways-panel' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'hawthorn/coaching-pathways-panel',
+		'version' => '1.0.0',
+		'title' => 'Coaching Pathway Panel',
+		'category' => 'design',
+		'icon' => 'screenoptions',
+		'description' => 'An editable panel within a coaching pathways block.',
+		'parent' => array(
+			'hawthorn/coaching-pathways'
+		),
+		'attributes' => array(
+			'position' => array(
+				'type' => 'string',
+				'default' => 'left'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'reusable' => false
+		),
+		'editorScript' => 'file:./index.js'
+	),
 	'starter' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

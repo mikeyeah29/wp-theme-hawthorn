@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hawthorn/coaching-pathways-connector",
+	"version": "1.0.0",
+	"title": "Coaching Pathways Connector",
+	"category": "design",
+	"icon": "minus",
+	"description": "The visual connector between coaching pathway panels.",
+	"parent": [ "hawthorn/coaching-pathways" ],
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"editorScript": "file:./index.js"
+}

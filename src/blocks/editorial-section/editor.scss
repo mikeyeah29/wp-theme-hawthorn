@@ -1,0 +1,17 @@
+.wp-block-hawthorn-editorial-section {
+	min-height: 24rem;
+}
+
+.hawthorn-editorial-section__image-controls {
+	display: flex;
+	gap: 0.75rem;
+	margin-top: 0.75rem;
+}
+
+.wp-block-hawthorn-editorial-section .hawthorn-editorial-section__content {
+	min-width: 0;
+}
+
+.wp-block-hawthorn-editorial-section .block-list-appender {
+	position: relative;
+}

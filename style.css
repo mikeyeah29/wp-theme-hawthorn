@@ -52,6 +52,10 @@ img {
     padding: var(--wp--preset--spacing--xs) !important;
 }
 
+.hawthorn-principles-row--centered {
+    justify-content: center;
+}
+
 .service-card img {
     transition: filter 1.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -578,4 +582,10 @@ img {
 .wpcf7-submit {
     margin: 0px auto;
     display: block;
+}
+
+/* Block Overrides */
+
+.wp-block-enigma-feature-card {
+    background-color: var(--wp--preset--color--neutral);
 }

@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hawthorn/editorial-section",
+	"version": "1.0.0",
+	"title": "Editorial Section",
+	"category": "design",
+	"icon": "align-wide",
+	"description": "A fixed cover and two-column layout with flexible editorial content.",
+	"keywords": [ "editorial", "cover", "columns" ],
+	"textdomain": "hawthorn",
+	"attributes": {
+		"backgroundImageId": {
+			"type": "number",
+			"role": "content"
+		},
+		"backgroundImageUrl": {
+			"type": "string",
+			"default": "",
+			"role": "content"
+		},
+		"heading": {
+			"type": "string",
+			"default": "",
+			"role": "content"
+		}
+	},
+	"supports": {
+		"color": false,
+		"customClassName": false,
+		"html": false,
+		"spacing": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

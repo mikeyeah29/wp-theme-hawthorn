@@ -5,6 +5,10 @@
  * @package Hawthorn
  */
 
+require_once get_stylesheet_directory() . '/inc/class-block-editor.php';
+
+new Hawthorn_Block_Editor();
+
 // function hawthorn_enqueue_google_fonts() {
 // 	wp_enqueue_style(
 // 		'hawthorn-google-fonts',
@@ -97,3 +101,19 @@ function hawthorn_register_blocks() {
 	}
 }
 add_action( 'init', 'hawthorn_register_blocks' );
+
+/**
+ * Provide theme asset URLs used by Hawthorn blocks in the editor.
+ */
+function hawthorn_editorial_section_editor_settings() {
+	wp_add_inline_script(
+		'hawthorn-editorial-section-editor-script',
+		'window.hawthornEditorialSectionSettings = ' . wp_json_encode(
+			array(
+				'defaultBackgroundImageUrl' => get_stylesheet_directory_uri() . '/img/editorial-section-background.png',
+			)
+		) . ';',
+		'before'
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'hawthorn_editorial_section_editor_settings', 20 );

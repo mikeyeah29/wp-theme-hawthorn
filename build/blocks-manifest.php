@@ -143,6 +143,87 @@ return array(
 		),
 		'editorScript' => 'file:./index.js'
 	),
+	'editorial-section' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'hawthorn/editorial-section',
+		'version' => '1.0.0',
+		'title' => 'Editorial Section',
+		'category' => 'design',
+		'icon' => 'align-wide',
+		'description' => 'A fixed cover and two-column layout with flexible editorial content.',
+		'keywords' => array(
+			'editorial',
+			'cover',
+			'columns'
+		),
+		'textdomain' => 'hawthorn',
+		'attributes' => array(
+			'backgroundImageId' => array(
+				'type' => 'number',
+				'role' => 'content'
+			),
+			'backgroundImageUrl' => array(
+				'type' => 'string',
+				'default' => '',
+				'role' => 'content'
+			),
+			'heading' => array(
+				'type' => 'string',
+				'default' => '',
+				'role' => 'content'
+			)
+		),
+		'supports' => array(
+			'color' => false,
+			'customClassName' => false,
+			'html' => false,
+			'spacing' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'hero' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'hawthorn/hero',
+		'version' => '1.0.0',
+		'title' => 'Hero',
+		'category' => 'design',
+		'icon' => 'cover-image',
+		'description' => 'A centred page hero with flexible supporting content.',
+		'keywords' => array(
+			'hero',
+			'banner',
+			'heading'
+		),
+		'textdomain' => 'hawthorn',
+		'attributes' => array(
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			),
+			'variant' => array(
+				'type' => 'string',
+				'default' => 'standard'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full'
+			),
+			'anchor' => true,
+			'color' => false,
+			'customClassName' => false,
+			'html' => false,
+			'spacing' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css'
+	),
 	'starter' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

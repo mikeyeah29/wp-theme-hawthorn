@@ -230,14 +230,15 @@ img {
     }
 }
 
-.wp-block-button.is-style-hawthorn-arrow .wp-block-button__link {
+.wp-block-button.is-style-hawthorn-arrow .wp-block-button__link,
+.wpcf7-submit {
     border-radius: 999px;
     padding: 12px 64px 12px 24px;
     letter-spacing: 0em;
     font-weight: 400;
     min-width: min(100%, 492px);
     position: relative;
-    transition: padding 1.25s cubic-bezier(0.23, 1, 0.32, 1), outline 1.25s cubic-bezier(0.23, 1, 0.32, 1), filter 1.25s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: outline 1.25s cubic-bezier(0.23, 1, 0.32, 1), filter 1.25s cubic-bezier(0.23, 1, 0.32, 1), background-position 1.25s cubic-bezier(0.23, 1, 0.32, 1);
     outline: solid 0px #0000000d;
 }
 
@@ -249,6 +250,10 @@ img {
     transform: translateY(-50%);
 }
 
+.wp-block-button__link.has-white-color {
+    color: var(--wp--preset--color--white) !important;
+}
+
 .wp-block-button.is-style-hawthorn-arrow .wp-block-button__link.has-white-color::after {
     content: url('img/button-arrow-light.svg');
     position: absolute;
@@ -257,7 +262,8 @@ img {
     transform: translateY(-38%);
 }
 
-.wp-block-button.is-style-hawthorn-arrow .wp-block-button__link:hover {
+.wp-block-button.is-style-hawthorn-arrow .wp-block-button__link:hover,
+.wpcf7-submit:hover {
     /* padding: 12px 72px 12px 24px; */
     outline: solid 8px #0000000d;
     filter: brightness(1.1);
@@ -271,6 +277,29 @@ img {
 
 .wp-block-button.is-style-hawthorn-arrow .wp-block-button__link:hover:after {
     right: 18px;
+}
+
+/* Inputs cannot render ::after, so use the same arrow as a background image. */
+.wpcf7-submit {
+    appearance: none;
+    background-color: var(--wp--preset--color--accent);
+    background-image: url('img/button-arrow-light.svg');
+    background-position: calc(100% - 24px) 50%;
+    background-repeat: no-repeat;
+    background-size: 24px 15px;
+    border: 0;
+    color: var(--wp--preset--color--white);
+    cursor: pointer;
+    font: inherit;
+}
+
+.wpcf7-submit.has-white-color {
+    background-image: url('img/button-arrow-light.svg');
+}
+
+.wpcf7 input[type="submit"]:hover {
+    background-position: calc(100% - 18px) 50%;
+    background-color: var(--wp--preset--color--accent) !important;
 }
 
 /* .about-section-img {
@@ -363,6 +392,7 @@ img {
     color: var(--wp--preset--color--text) !important;
     /* color: #ffffff !important; */
     border: solid 2px #acaa7d;
+    width: 195px;
 }
 
 @media (min-width: 768px) {
@@ -399,6 +429,7 @@ img {
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 input[type="tel"],
+.wpcf7 .wpcf7-select,
 .wpcf7 textarea {
     width: 100%;
     padding: 0.85rem 1rem;
@@ -412,6 +443,22 @@ img {
     margin-top: 8px !important;
 }
 
+/* Selects use the same field styling with a consistent dropdown indicator. */
+.wpcf7 .wpcf7-select:not([multiple]) {
+    appearance: none;
+    background-image: url('img/select-chevron.svg');
+    background-position: right 1rem center;
+    background-repeat: no-repeat;
+    background-size: 12px 8px;
+    cursor: pointer;
+    padding-right: 3rem;
+}
+
+.wpcf7 .wpcf7-select:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 /* Textarea resizing */
 .wpcf7 textarea {
     min-height: 140px;
@@ -420,6 +467,7 @@ img {
 
 /* Focus state */
 .wpcf7 input:focus,
+.wpcf7 .wpcf7-select:focus,
 .wpcf7 textarea:focus {
     outline: none;
     border-color: var(--wp--preset--color--primary, #333);
@@ -427,7 +475,7 @@ img {
 }
 
 /* Submit button */
-.wpcf7 input[type="submit"] {
+/* .wpcf7 input[type="submit"] {
     border: none;
     border-radius: 4px;
     background: var(--wp--preset--color--accent);
@@ -437,7 +485,7 @@ img {
     padding: 1rem 1.5rem;
     cursor: pointer;
     transition: transform 0.1s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
+} */
 
 /* Button hover */
 /* .wpcf7 input[type="submit"]:hover {
@@ -447,10 +495,10 @@ img {
 } */
 
 /* Button active */
-.wpcf7 input[type="submit"]:active {
+/* .wpcf7 input[type="submit"]:active {
     transform: translateY(0);
     box-shadow: none;
-}
+} */
 
 /* Validation errors */
 .wpcf7-not-valid {
@@ -489,4 +537,45 @@ img {
 .wp-block-breadcrumbs li,
 .wp-block-breadcrumbs ol {
     justify-content: center !important;
+}
+
+/* About page */
+
+.page-template-page-about {
+    padding-top: 0 !important;
+}
+
+.page-template-page-about .header-centered {
+    display: none;
+}
+
+.about-page {
+    overflow: clip;
+}
+
+.about-hero {
+    background: #e8e3d8;
+    color: #181920;
+}
+
+.about-hero__frame {
+    min-height: 990px;
+    height: 100svh;
+    position: relative;
+}
+
+.about-hero__portrait {
+    border-radius: 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 60%;
+}
+
+.wpcf7-submit {
+    margin: 0px auto;
+    display: block;
 }

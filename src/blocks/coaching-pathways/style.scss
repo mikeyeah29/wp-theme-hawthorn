@@ -1,6 +1,6 @@
 .wp-block-hawthorn-coaching-pathways {
 	--coaching-pathways-gap: clamp(1.25rem, 3vw, 3rem);
-	--coaching-pathways-line: var(--wp--preset--color--primary);
+	--coaching-pathways-line: var(--wp--preset--color--neutral);
 	// --coaching-pathways-panel: var(--wp--preset--gradient--sage-glow);
 	--coaching-pathways-panel: var(--wp--preset--color--neutral);
 
@@ -21,17 +21,23 @@
 
 .coaching-pathways--inner-blocks > .coaching-pathways__panel--left,
 .coaching-pathways--inner-blocks > .coaching-pathways__panel--right {
-	grid-row: 1;
+	grid-row: 2;
 }
 
-.coaching-pathways--inner-blocks > .coaching-pathways__connector-block {
+.coaching-pathways--inner-blocks > .coaching-pathways__connector-block--top {
 	grid-column: 1 / -1;
-	grid-row: 2;
+	grid-row: 1;
+	transform: scaleY(-1);
+}
+
+.coaching-pathways--inner-blocks > .coaching-pathways__connector-block:not(.coaching-pathways__connector-block--top) {
+	grid-column: 1 / -1;
+	grid-row: 3;
 }
 
 .coaching-pathways--inner-blocks > .coaching-pathways__panel--bottom {
 	grid-column: 1 / -1;
-	grid-row: 3;
+	grid-row: 4;
 }
 
 .coaching-pathways--inner-blocks .coaching-pathways__panel > .wp-block-buttons {
@@ -57,15 +63,16 @@
 	flex-direction: column;
 	padding: clamp(1.5rem, 4vw, 3rem);
 	// border: solid 2px var(--coaching-pathways-line);
+	text-align: center;
 }
 
 .coaching-pathways__eyebrow {
 	// color: var(--wp--preset--color--accent);
-	font-size: 0.8125rem;
-	font-weight: 700;
-	letter-spacing: 0.12em;
-	line-height: 1.3;
-	margin: 0 0 0.75rem;
+	// font-size: 0.8125rem;
+	// font-weight: 700;
+	// letter-spacing: 0.12em;
+	// line-height: 1.3;
+	// margin: 0 0 0.75rem;
 	// text-transform: uppercase;
 }
 

@@ -1,5 +1,5 @@
 import { createBlock } from '@wordpress/blocks';
-import { RichText, useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks, RichText, useBlockProps } from '@wordpress/block-editor';
 
 import metadata from './block.json';
 
@@ -195,7 +195,23 @@ function migrate( attributes ) {
 	];
 }
 
+function saveInnerBlocksWithoutTopConnector() {
+	return (
+		<div
+			{ ...useBlockProps.save( {
+				className: 'coaching-pathways coaching-pathways--inner-blocks',
+			} ) }
+		>
+			<InnerBlocks.Content />
+		</div>
+	);
+}
+
 export default [
+	{
+		attributes: metadata.attributes,
+		save: saveInnerBlocksWithoutTopConnector,
+	},
 	{
 		attributes: metadata.attributes,
 		migrate,

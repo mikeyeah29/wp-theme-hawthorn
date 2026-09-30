@@ -98,7 +98,8 @@ return array(
 		),
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css'
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
 	),
 	'coaching-pathways-connector' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',

@@ -1,6 +1,56 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'accordion-image-section' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'hawthorn/accordion-image-section',
+		'version' => '1.0.0',
+		'title' => 'Accordion Image Section',
+		'category' => 'design',
+		'icon' => 'columns',
+		'description' => 'A fixed two-column section with a heading, accordion and image.',
+		'keywords' => array(
+			'accordion',
+			'image',
+			'columns'
+		),
+		'textdomain' => 'hawthorn',
+		'attributes' => array(
+			'heading' => array(
+				'type' => 'string',
+				'default' => '<em>What I Help With</em>',
+				'role' => 'content'
+			),
+			'imageId' => array(
+				'type' => 'number',
+				'role' => 'content'
+			),
+			'imageUrl' => array(
+				'type' => 'string',
+				'default' => '',
+				'role' => 'content'
+			),
+			'imageAlt' => array(
+				'type' => 'string',
+				'default' => '',
+				'role' => 'content'
+			)
+		),
+		'allowedBlocks' => array(
+			'core/accordion'
+		),
+		'supports' => array(
+			'color' => false,
+			'customClassName' => false,
+			'html' => false,
+			'spacing' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'coaching-pathways' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

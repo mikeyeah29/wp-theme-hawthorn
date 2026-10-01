@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hawthorn/accordion-image-section",
+	"version": "1.0.0",
+	"title": "Accordion Image Section",
+	"category": "design",
+	"icon": "columns",
+	"description": "A fixed two-column section with a heading, accordion and image.",
+	"keywords": [ "accordion", "image", "columns" ],
+	"textdomain": "hawthorn",
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "<em>What I Help With</em>",
+			"role": "content"
+		},
+		"imageId": {
+			"type": "number",
+			"role": "content"
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": "",
+			"role": "content"
+		},
+		"imageAlt": {
+			"type": "string",
+			"default": "",
+			"role": "content"
+		}
+	},
+	"allowedBlocks": [ "core/accordion" ],
+	"supports": {
+		"color": false,
+		"customClassName": false,
+		"html": false,
+		"spacing": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

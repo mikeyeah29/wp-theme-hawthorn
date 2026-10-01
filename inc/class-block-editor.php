@@ -29,40 +29,50 @@ final class Hawthorn_Block_Editor {
 	);
 
 	/**
+	 * Attributes that can be overridden in synced patterns.
+	 */
+	private const BINDING_ATTRIBUTES = array(
+		'enigma/feature-card'       => array(
+			'iconId',
+			'iconUrl',
+			'iconAlt',
+			'title',
+			'content',
+		),
+		'enigma/testimonial-slider' => array(
+			'limit',
+			'service',
+		),
+	);
+
+	/**
 	 * Register editor filters.
 	 */
 	public function __construct() {
-		add_filter(
-			'register_block_type_args',
-			array( $this, 'filter_block_supports' ),
-			10,
-			2
-		);
+		add_filter('register_block_type_args', array( $this, 'filter_block_supports' ), 10, 2);
+		add_action('enqueue_block_editor_assets', array( $this, 'enqueue_block_support_overrides' ), 20);
+		add_filter('block_bindings_supported_attributes', array( $this, 'filter_binding_attributes' ), 10, 2);
+	}
 
-		add_action(
-			'enqueue_block_editor_assets',
-			array( $this, 'enqueue_block_support_overrides' ),
-			20
-		);
+	/**
+	 * Add attributes that Hawthorn allows synced patterns to override.
+	 *
+	 * @param array  $attributes Supported attribute names.
+	 * @param string $block_type Block type name.
+	 * @return array
+	 */
+	public function filter_binding_attributes( $attributes, $block_type ) {
+		if ( ! isset( self::BINDING_ATTRIBUTES[ $block_type ] ) ) {
+			return $attributes;
+		}
 
-		add_filter(
-			'block_bindings_supported_attributes_enigma/feature-card',
-			function ( $attributes ) {
-				return array_values(
-					array_unique(
-						array_merge(
-							$attributes,
-							array(
-								'iconId',
-								'iconUrl',
-								'iconAlt',
-								'title',
-								'content',
-							)
-						)
-					)
-				);
-			}
+		return array_values(
+			array_unique(
+				array_merge(
+					$attributes,
+					self::BINDING_ATTRIBUTES[ $block_type ]
+				)
+			)
 		);
 	}
 

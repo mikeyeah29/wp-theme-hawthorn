@@ -13,7 +13,7 @@ import { __ } from '@wordpress/i18n';
 
 import './editor.scss';
 
-const ALLOWED_BLOCKS = [ 'core/accordion' ];
+const ALLOWED_BLOCKS = [ 'core/accordion', 'core/buttons' ];
 const TEMPLATE = [
 	[
 		'core/accordion',
@@ -316,14 +316,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					>
 						{ imageUrl ? (
 							<figure className="wp-block-image size-full br">
-								<img
-									src={ imageUrl }
-									alt={ imageAlt }
-									style={ {
-										aspectRatio: '1',
-										objectFit: 'cover',
-									} }
-								/>
+								<img src={ imageUrl } alt={ imageAlt } />
 							</figure>
 						) : (
 							<MediaPlaceholder

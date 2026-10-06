@@ -35,7 +35,8 @@
     }
   },
   "allowedBlocks": [
-    "core/accordion"
+    "core/accordion",
+    "core/buttons"
   ],
   "supports": {
     "color": false,

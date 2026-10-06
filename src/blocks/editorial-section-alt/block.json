@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hawthorn/editorial-section-alt",
+	"version": "1.0.0",
+	"title": "Editorial Section Alt",
+	"category": "design",
+	"icon": "align-wide",
+	"description": "A light editorial cover with a heading, thoughts and supporting content.",
+	"keywords": [ "editorial", "cover", "thoughts" ],
+	"textdomain": "hawthorn",
+	"attributes": {
+		"backgroundImageId": {
+			"type": "number",
+			"role": "content"
+		},
+		"backgroundImageUrl": {
+			"type": "string",
+			"default": "",
+			"role": "content"
+		},
+		"heading": {
+			"type": "string",
+			"default": "<em>Most product challenges are human challenges…</em>",
+			"role": "content"
+		}
+	},
+	"allowedBlocks": [
+		"enigma/thoughts",
+		"core/heading",
+		"core/list",
+		"core/paragraph"
+	],
+	"supports": {
+		"color": false,
+		"customClassName": false,
+		"html": false,
+		"spacing": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

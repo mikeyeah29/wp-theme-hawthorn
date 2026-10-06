@@ -1,6 +1,57 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'about-section' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'hawthorn/about-section',
+		'version' => '1.0.0',
+		'title' => 'About Section',
+		'category' => 'design',
+		'icon' => 'id-alt',
+		'description' => 'A fixed two-column about section with an image and editable content.',
+		'keywords' => array(
+			'about',
+			'image',
+			'columns'
+		),
+		'textdomain' => 'hawthorn',
+		'attributes' => array(
+			'heading' => array(
+				'type' => 'string',
+				'default' => 'Why work with me?',
+				'role' => 'content'
+			),
+			'imageId' => array(
+				'type' => 'number',
+				'role' => 'content'
+			),
+			'imageUrl' => array(
+				'type' => 'string',
+				'default' => '',
+				'role' => 'content'
+			),
+			'imageAlt' => array(
+				'type' => 'string',
+				'default' => '',
+				'role' => 'content'
+			)
+		),
+		'allowedBlocks' => array(
+			'core/paragraph',
+			'core/buttons'
+		),
+		'supports' => array(
+			'color' => false,
+			'customClassName' => false,
+			'html' => false,
+			'spacing' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'accordion-image-section' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -38,7 +89,8 @@ return array(
 			)
 		),
 		'allowedBlocks' => array(
-			'core/accordion'
+			'core/accordion',
+			'core/buttons'
 		),
 		'supports' => array(
 			'color' => false,
@@ -50,6 +102,49 @@ return array(
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
+	),
+	'benefits-list' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'hawthorn/benefits-list',
+		'version' => '1.0.0',
+		'title' => 'Benefits List',
+		'category' => 'design',
+		'icon' => 'yes-alt',
+		'description' => 'A bordered panel containing a heading and a styled list of benefits.',
+		'keywords' => array(
+			'benefits',
+			'list',
+			'outcomes'
+		),
+		'textdomain' => 'hawthorn',
+		'attributes' => array(
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			),
+			'heading' => array(
+				'type' => 'string',
+				'default' => 'By the end of the engagement your team will have…',
+				'role' => 'content'
+			)
+		),
+		'allowedBlocks' => array(
+			'core/paragraph'
+		),
+		'supports' => array(
+			'align' => array(
+				'full'
+			),
+			'anchor' => true,
+			'color' => false,
+			'customClassName' => false,
+			'html' => false,
+			'spacing' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css'
 	),
 	'coaching-pathways' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -235,11 +330,59 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
+	'editorial-section-alt' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'hawthorn/editorial-section-alt',
+		'version' => '1.0.0',
+		'title' => 'Editorial Section Alt',
+		'category' => 'design',
+		'icon' => 'align-wide',
+		'description' => 'A light editorial cover with a heading, thoughts and supporting content.',
+		'keywords' => array(
+			'editorial',
+			'cover',
+			'thoughts'
+		),
+		'textdomain' => 'hawthorn',
+		'attributes' => array(
+			'backgroundImageId' => array(
+				'type' => 'number',
+				'role' => 'content'
+			),
+			'backgroundImageUrl' => array(
+				'type' => 'string',
+				'default' => '',
+				'role' => 'content'
+			),
+			'heading' => array(
+				'type' => 'string',
+				'default' => '<em>Most product challenges are human challenges…</em>',
+				'role' => 'content'
+			)
+		),
+		'allowedBlocks' => array(
+			'enigma/thoughts',
+			'core/heading',
+			'core/list',
+			'core/paragraph'
+		),
+		'supports' => array(
+			'color' => false,
+			'customClassName' => false,
+			'html' => false,
+			'spacing' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'hero' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'hawthorn/hero',
-		'version' => '1.0.0',
+		'version' => '1.1.0',
 		'title' => 'Hero',
 		'category' => 'design',
 		'icon' => 'cover-image',
@@ -258,7 +401,17 @@ return array(
 			'variant' => array(
 				'type' => 'string',
 				'default' => 'standard'
+			),
+			'heading' => array(
+				'type' => 'string',
+				'default' => '',
+				'role' => 'content'
 			)
+		),
+		'allowedBlocks' => array(
+			'core/breadcrumbs',
+			'core/buttons',
+			'core/paragraph'
 		),
 		'supports' => array(
 			'align' => array(

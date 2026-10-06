@@ -30,7 +30,7 @@
 			"role": "content"
 		}
 	},
-	"allowedBlocks": [ "core/accordion" ],
+	"allowedBlocks": [ "core/accordion", "core/buttons" ],
 	"supports": {
 		"color": false,
 		"customClassName": false,

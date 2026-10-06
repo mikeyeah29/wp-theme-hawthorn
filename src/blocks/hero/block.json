@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "hawthorn/hero",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"title": "Hero",
 	"category": "design",
 	"icon": "cover-image",
@@ -17,8 +17,14 @@
 		"variant": {
 			"type": "string",
 			"default": "standard"
+		},
+		"heading": {
+			"type": "string",
+			"default": "",
+			"role": "content"
 		}
 	},
+	"allowedBlocks": [ "core/breadcrumbs", "core/buttons", "core/paragraph" ],
 	"supports": {
 		"align": [ "full" ],
 		"anchor": true,

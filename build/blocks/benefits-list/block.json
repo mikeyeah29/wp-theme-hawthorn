@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "hawthorn/benefits-list",
+  "version": "1.0.0",
+  "title": "Benefits List",
+  "category": "design",
+  "icon": "yes-alt",
+  "description": "A bordered panel containing a heading and a styled list of benefits.",
+  "keywords": [
+    "benefits",
+    "list",
+    "outcomes"
+  ],
+  "textdomain": "hawthorn",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "heading": {
+      "type": "string",
+      "default": "By the end of the engagement your team will have…",
+      "role": "content"
+    }
+  },
+  "allowedBlocks": [
+    "core/paragraph"
+  ],
+  "supports": {
+    "align": [
+      "full"
+    ],
+    "anchor": true,
+    "color": false,
+    "customClassName": false,
+    "html": false,
+    "spacing": false
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

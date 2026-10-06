@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "hawthorn/about-section",
+  "version": "1.0.0",
+  "title": "About Section",
+  "category": "design",
+  "icon": "id-alt",
+  "description": "A fixed two-column about section with an image and editable content.",
+  "keywords": [
+    "about",
+    "image",
+    "columns"
+  ],
+  "textdomain": "hawthorn",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Why work with me?",
+      "role": "content"
+    },
+    "imageId": {
+      "type": "number",
+      "role": "content"
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "allowedBlocks": [
+    "core/paragraph",
+    "core/buttons"
+  ],
+  "supports": {
+    "color": false,
+    "customClassName": false,
+    "html": false,
+    "spacing": false
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

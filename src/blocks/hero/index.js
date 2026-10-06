@@ -2,18 +2,10 @@ import { registerBlockType, registerBlockVariation } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 
 import metadata from './block.json';
+import deprecated from './deprecated';
 import Edit from './edit';
 import save from './save';
 import './style.scss';
-
-const headingBlock = [
-	'core/heading',
-	{
-		level: 1,
-		fontSize: 'hero',
-		placeholder: __( 'Add a hero heading…', 'hawthorn' ),
-	},
-];
 
 const buttonBlock = [
 	'core/buttons',
@@ -47,6 +39,7 @@ const introBlock = [
 ];
 
 registerBlockType( metadata.name, {
+	deprecated,
 	edit: Edit,
 	save,
 } );
@@ -60,7 +53,7 @@ registerBlockVariation( metadata.name, {
 	attributes: {
 		variant: 'standard',
 	},
-	innerBlocks: [ headingBlock, buttonBlock ],
+	innerBlocks: [ buttonBlock ],
 	scope: [ 'inserter' ],
 } );
 
@@ -75,7 +68,7 @@ registerBlockVariation( metadata.name, {
 	attributes: {
 		variant: 'with-intro',
 	},
-	innerBlocks: [ headingBlock, introBlock, buttonBlock ],
+	innerBlocks: [ introBlock, buttonBlock ],
 	scope: [ 'inserter' ],
 } );
 
@@ -98,7 +91,6 @@ registerBlockVariation( metadata.name, {
 				showHomeItem: false,
 			},
 		],
-		headingBlock,
 		introBlock,
 		buttonBlock,
 		[

@@ -187,9 +187,7 @@
             "fontSize": "16px",
             "lineHeight": 1.65
         },
-        "spacing": {
-            "blockGap": "var(--wp--preset--spacing--xs)"
-        },
+       
         "elements": {
             "button": {
                 "color": {

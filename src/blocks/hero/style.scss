@@ -50,6 +50,10 @@
 	font-size: var(--wp--preset--font-size--sm);
 }
 
+.hawthorn-hero__inner > .wp-block-breadcrumbs {
+	order: -1;
+}
+
 .hawthorn-hero__inner .wp-block-buttons {
 	justify-content: center;
 }

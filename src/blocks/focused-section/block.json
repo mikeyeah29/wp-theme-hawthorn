@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hawthorn/focused-section",
+	"version": "1.0.0",
+	"title": "Focused Section",
+	"category": "design",
+	"icon": "columns",
+	"description": "A two-column section with a heading, editable text and an image.",
+	"keywords": [ "focused", "image", "columns" ],
+	"textdomain": "hawthorn",
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "<em>Focused from the outset</em>",
+			"role": "content"
+		},
+		"imageId": {
+			"type": "number",
+			"role": "content"
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": "https://wordpress-1599462-6491197.cloudwaysapps.com/wp-content/uploads/2026/08/untangled.png",
+			"role": "content"
+		},
+		"imageAlt": {
+			"type": "string",
+			"default": "",
+			"role": "content"
+		}
+	},
+	"allowedBlocks": [ "core/paragraph", "core/list" ],
+	"supports": {
+		"color": false,
+		"customClassName": false,
+		"html": false,
+		"spacing": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

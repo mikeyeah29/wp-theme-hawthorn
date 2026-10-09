@@ -288,6 +288,70 @@ return array(
 		),
 		'editorScript' => 'file:./index.js'
 	),
+	'contact-section' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'hawthorn/contact-section',
+		'version' => '1.0.0',
+		'title' => 'Contact Section',
+		'category' => 'design',
+		'icon' => 'email-alt',
+		'description' => 'A complete contact section with editable copy and a Contact Form 7 form.',
+		'keywords' => array(
+			'contact',
+			'form',
+			'email'
+		),
+		'textdomain' => 'hawthorn',
+		'attributes' => array(
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			),
+			'heading' => array(
+				'type' => 'string',
+				'default' => 'Contact',
+				'role' => 'content'
+			),
+			'intro' => array(
+				'type' => 'string',
+				'default' => 'Complete the form below or get in touch directly by email or phone, and I’ll get back to you as soon as I can.',
+				'role' => 'content'
+			),
+			'formId' => array(
+				'type' => 'string',
+				'default' => '07c568a'
+			),
+			'formTitle' => array(
+				'type' => 'string',
+				'default' => 'Contact form 1'
+			),
+			'directPrompt' => array(
+				'type' => 'string',
+				'default' => 'Prefer to get in touch directly?',
+				'role' => 'content'
+			),
+			'email' => array(
+				'type' => 'string',
+				'default' => 'annemarie@hawthornpsychology.com',
+				'role' => 'content'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full'
+			),
+			'anchor' => true,
+			'color' => false,
+			'customClassName' => false,
+			'html' => false,
+			'spacing' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'editorial-section' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -366,6 +430,57 @@ return array(
 			'core/heading',
 			'core/list',
 			'core/paragraph'
+		),
+		'supports' => array(
+			'color' => false,
+			'customClassName' => false,
+			'html' => false,
+			'spacing' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'focused-section' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'hawthorn/focused-section',
+		'version' => '1.0.0',
+		'title' => 'Focused Section',
+		'category' => 'design',
+		'icon' => 'columns',
+		'description' => 'A two-column section with a heading, editable text and an image.',
+		'keywords' => array(
+			'focused',
+			'image',
+			'columns'
+		),
+		'textdomain' => 'hawthorn',
+		'attributes' => array(
+			'heading' => array(
+				'type' => 'string',
+				'default' => '<em>Focused from the outset</em>',
+				'role' => 'content'
+			),
+			'imageId' => array(
+				'type' => 'number',
+				'role' => 'content'
+			),
+			'imageUrl' => array(
+				'type' => 'string',
+				'default' => 'https://wordpress-1599462-6491197.cloudwaysapps.com/wp-content/uploads/2026/08/untangled.png',
+				'role' => 'content'
+			),
+			'imageAlt' => array(
+				'type' => 'string',
+				'default' => '',
+				'role' => 'content'
+			)
+		),
+		'allowedBlocks' => array(
+			'core/paragraph',
+			'core/list'
 		),
 		'supports' => array(
 			'color' => false,

@@ -36,7 +36,7 @@ $image_alt = $attributes['imageAlt'] ?? '';
 			</div>
 			<div class="wp-block-column hawthorn-about-section__content" style="flex-basis:66.666%">
 				<?php if ( $heading ) : ?>
-					<h2 class="wp-block-heading has-xl-font-size hawthorn-about-section__heading"><?php echo wp_kses_post( $heading ); ?></h2>
+					<h2 class="wp-block-heading has-xl-font-size hawthorn-about-section__heading mb-0"><?php echo wp_kses_post( $heading ); ?></h2>
 				<?php endif; ?>
 				<?php echo $content; ?>
 			</div>

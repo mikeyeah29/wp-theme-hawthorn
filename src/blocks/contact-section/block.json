@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hawthorn/contact-section",
+	"version": "1.0.0",
+	"title": "Contact Section",
+	"category": "design",
+	"icon": "email-alt",
+	"description": "A complete contact section with editable copy and a Contact Form 7 form.",
+	"keywords": [ "contact", "form", "email" ],
+	"textdomain": "hawthorn",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"heading": {
+			"type": "string",
+			"default": "Contact",
+			"role": "content"
+		},
+		"intro": {
+			"type": "string",
+			"default": "Complete the form below or get in touch directly by email or phone, and I’ll get back to you as soon as I can.",
+			"role": "content"
+		},
+		"formId": {
+			"type": "string",
+			"default": "07c568a"
+		},
+		"formTitle": {
+			"type": "string",
+			"default": "Contact form 1"
+		},
+		"directPrompt": {
+			"type": "string",
+			"default": "Prefer to get in touch directly?",
+			"role": "content"
+		},
+		"email": {
+			"type": "string",
+			"default": "annemarie@hawthornpsychology.com",
+			"role": "content"
+		}
+	},
+	"supports": {
+		"align": [ "full" ],
+		"anchor": true,
+		"color": false,
+		"customClassName": false,
+		"html": false,
+		"spacing": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -16,3 +16,18 @@
   margin-left: auto;
   position: relative;
 }
+
+.wp-block-hawthorn-hero [data-type="core/breadcrumbs"] {
+  color: var(--wp--preset--color--primary);
+  font-size: var(--wp--preset--font-size--sm);
+  line-height: 1.4;
+  order: -1;
+}
+
+.wp-block-hawthorn-hero [data-type="core/breadcrumbs"] > * {
+  display: none;
+}
+
+.wp-block-hawthorn-hero [data-type="core/breadcrumbs"]::before {
+  content: "Breadcrumbs here";
+}

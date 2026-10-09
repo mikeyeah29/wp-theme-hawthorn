@@ -4,6 +4,9 @@
 .wp-block-hawthorn-about-section {
   box-sizing: border-box;
   padding: 0 var(--wp--preset--spacing--xs) var(--wp--preset--spacing--lg);
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
   width: 100%;
 }
 
@@ -14,12 +17,15 @@
   padding: var(--wp--preset--spacing--lg) var(--wp--preset--spacing--xs);
   width: 100%;
 }
+.hawthorn-about-section .wp-block-buttons {
+  margin-top: var(--wp--preset--spacing--xs) !important;
+}
 
 .hawthorn-about-section .wp-block-columns {
   align-items: flex-start;
   display: flex;
   flex-wrap: nowrap;
-  gap: var(--wp--preset--spacing--xs);
+  gap: var(--wp--preset--spacing--md);
   margin-right: auto;
   margin-left: auto;
   max-width: var(--wp--style--global--wide-size, 1200px);

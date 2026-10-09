@@ -1,0 +1,46 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/contact-section/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-hawthorn-contact-section {
+  box-sizing: border-box;
+  margin-top: 0;
+  padding: var(--wp--preset--spacing--lg) var(--wp--preset--spacing--xs);
+  width: 100%;
+}
+
+.hawthorn-contact-section__inner {
+  margin: 0 auto;
+  max-width: var(--wp--style--global--content-size, 800px);
+  width: 100%;
+}
+
+.hawthorn-contact-section__heading {
+  margin: 0 auto var(--wp--preset--spacing--lg);
+  text-align: center;
+}
+
+.hawthorn-contact-section__content {
+  margin: 0 auto;
+  max-width: 640px;
+  width: 100%;
+}
+
+.hawthorn-contact-section__intro {
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.hawthorn-contact-section__direct {
+  margin: var(--wp--preset--spacing--xs) 0 0.75rem;
+  text-align: center;
+}
+
+.hawthorn-contact-section__email {
+  color: var(--wp--preset--color--accent);
+  margin: 0;
+  text-align: center;
+}
+
+.hawthorn-contact-section__email a {
+  color: currentcolor;
+}

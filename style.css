@@ -589,3 +589,13 @@ img {
 .wp-block-enigma-feature-card {
     background-color: var(--wp--preset--color--neutral);
 }
+
+.wp-block-paragraph {
+    margin-top: var(--wp--preset--spacing--xs);
+    &:first-child {
+        margin-top: 0px;
+    }
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}

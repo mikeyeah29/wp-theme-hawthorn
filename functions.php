@@ -9,6 +9,10 @@ require_once get_stylesheet_directory() . '/inc/class-block-editor.php';
 
 new Hawthorn_Block_Editor();
 
+add_action( 'init', function () {
+	unregister_post_type( 'service' );
+}, 100 );
+
 // function hawthorn_enqueue_google_fonts() {
 // 	wp_enqueue_style(
 // 		'hawthorn-google-fonts',

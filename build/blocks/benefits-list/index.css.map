@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/benefits-list/index.css","mappings":";;;AAAA;EACC;EACA;EACA;AACD,C","sources":["webpack://hawthorn/./src/blocks/benefits-list/editor.scss"],"sourcesContent":[".wp-block-hawthorn-benefits-list .block-list-appender {\n\tmargin-left: auto;\n\tmargin-right: auto;\n\tposition: relative;\n}\n"],"names":[],"sourceRoot":""}

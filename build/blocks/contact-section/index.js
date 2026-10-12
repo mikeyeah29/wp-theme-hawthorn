@@ -1,1 +1,456 @@
-(()=>{"use strict";var e={812(){const e=window.wp.blocks,t=JSON.parse('{"UU":"hawthorn/contact-section"}'),n=window.wp.blockEditor,o=window.wp.components,a=window.wp.i18n,s=window.ReactJSXRuntime;(0,e.registerBlockType)(t.UU,{edit:function({attributes:e,clientId:t,setAttributes:r}){const{heading:i,intro:l,formId:c,formTitle:h,directPrompt:d,email:m}=e,w=`hawthorn-contact-${t}`,p=(0,n.useBlockProps)({className:"hawthorn-contact-section"});return(0,s.jsxs)(s.Fragment,{children:[(0,s.jsx)(n.InspectorControls,{children:(0,s.jsxs)(o.PanelBody,{title:(0,a.__)("Contact details","hawthorn"),initialOpen:!0,children:[(0,s.jsx)(o.TextControl,{label:(0,a.__)("Contact Form 7 ID","hawthorn"),help:(0,a.__)("Use the ID shown in the Contact Form 7 shortcode.","hawthorn"),value:c,onChange:e=>r({formId:e})}),(0,s.jsx)(o.TextControl,{label:(0,a.__)("Contact form title","hawthorn"),value:h,onChange:e=>r({formTitle:e})}),(0,s.jsx)(o.TextControl,{label:(0,a.__)("Direct email address","hawthorn"),type:"email",value:m,onChange:e=>r({email:e})})]})}),(0,s.jsx)("section",{...p,children:(0,s.jsxs)("div",{className:"hawthorn-contact-section__inner",children:[(0,s.jsx)(n.RichText,{tagName:"h1",className:"hawthorn-contact-section__heading has-hero-font-size",value:i,allowedFormats:[],onChange:e=>r({heading:e}),placeholder:(0,a.__)("Add a heading…","hawthorn")}),(0,s.jsxs)("div",{className:"hawthorn-contact-section__content",children:[(0,s.jsx)(n.RichText,{tagName:"p",className:"hawthorn-contact-section__intro has-sm-font-size",value:l,allowedFormats:["core/bold","core/italic","core/link"],onChange:e=>r({intro:e}),placeholder:(0,a.__)("Add introductory text…","hawthorn")}),(0,s.jsx)("div",{className:"wpcf7 hawthorn-contact-section__form-preview","aria-hidden":"true",children:(0,s.jsxs)("form",{children:[(0,s.jsx)("p",{children:(0,s.jsxs)("label",{htmlFor:`${w}-name`,children:[(0,a.__)("Your name","hawthorn"),(0,s.jsx)("br",{}),(0,s.jsx)("input",{id:`${w}-name`,type:"text",disabled:!0})]})}),(0,s.jsx)("p",{children:(0,s.jsxs)("label",{htmlFor:`${w}-email`,children:[(0,a.__)("Your email","hawthorn"),(0,s.jsx)("br",{}),(0,s.jsx)("input",{id:`${w}-email`,type:"email",disabled:!0})]})}),(0,s.jsx)("p",{children:(0,s.jsxs)("label",{htmlFor:`${w}-subject`,children:[(0,a.__)("Subject","hawthorn"),(0,s.jsx)("br",{}),(0,s.jsx)("input",{id:`${w}-subject`,type:"text",disabled:!0})]})}),(0,s.jsx)("p",{children:(0,s.jsxs)("label",{htmlFor:`${w}-message`,children:[(0,a.__)("Your message (optional)","hawthorn"),(0,s.jsx)("br",{}),(0,s.jsx)("textarea",{id:`${w}-message`,rows:"10",disabled:!0})]})}),(0,s.jsx)("p",{children:(0,s.jsx)("input",{className:"wpcf7-submit",type:"submit",value:(0,a.__)("Submit","hawthorn"),disabled:!0})})]})}),(0,s.jsx)(n.RichText,{tagName:"p",className:"hawthorn-contact-section__direct has-sm-font-size",value:d,allowedFormats:[],onChange:e=>r({directPrompt:e}),placeholder:(0,a.__)("Add a direct contact prompt…","hawthorn")}),(0,s.jsxs)("p",{className:"hawthorn-contact-section__email has-sm-font-size",children:[(0,a.__)("Email:","hawthorn")," ",(0,s.jsx)("strong",{children:m})]})]})]})})]})},save:function(){return null}})}};const t={};function n(o){const a=t[o];if(void 0!==a)return a.exports;const s=t[o]={exports:{}};return e[o](s,s.exports,n),s.exports}n.m=e,(()=>{const e=[];n.O=(t,o,a,s)=>{if(o){s||=0;for(var r=e.length;r>0&&e[r-1][2]>s;r--)e[r]=e[r-1];return void(e[r]=[o,a,s])}let i=1/0;for(r=0;r<e.length;r++){let[o,a,s]=e[r],c=!0;for(var l=0;l<o.length;l++)1&s&&!(i>=s)||!Object.keys(n.O).every(e=>n.O[e](o[l]))?(c=!1,s<i&&(i=s)):o.splice(l--,1);if(c){e.splice(r--,1);const n=a();void 0!==n&&(t=n)}}return t}})(),n.o=(e,t)=>Object.hasOwn(e,t),(()=>{const e={815:0,767:0};n.O.j=t=>0===e[t];const t=(t,o)=>{let[a,s,r]=o;var i,l,c=0;if(a.some(t=>0!==e[t])){for(i in s)n.o(s,i)&&(n.m[i]=s[i]);if(r)var h=r(n)}for(t&&t(o);c<a.length;c++)l=a[c],n.o(e,l)&&e[l]&&e[l][0](),e[l]=0;return n.O(h)},o=globalThis.webpackChunkhawthorn||=[];o.forEach(t.bind(null,0)),o.push=t.bind(null,o.push.bind(o))})();let o=n.O(void 0,[767],()=>n(812));o=n.O(o)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/blocks/contact-section/edit.js"
+/*!********************************************!*\
+  !*** ./src/blocks/contact-section/edit.js ***!
+  \********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/contact-section/editor.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+function Edit({
+  attributes,
+  clientId,
+  setAttributes
+}) {
+  const {
+    heading,
+    intro,
+    formId,
+    formTitle,
+    directPrompt,
+    email
+  } = attributes;
+  const previewId = `hawthorn-contact-${clientId}`;
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
+    className: 'hawthorn-contact-section'
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Contact details', 'hawthorn'),
+        initialOpen: true,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Contact Form 7 ID', 'hawthorn'),
+          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Use the ID shown in the Contact Form 7 shortcode.', 'hawthorn'),
+          value: formId,
+          onChange: value => setAttributes({
+            formId: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Contact form title', 'hawthorn'),
+          value: formTitle,
+          onChange: value => setAttributes({
+            formTitle: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Direct email address', 'hawthorn'),
+          type: "email",
+          value: email,
+          onChange: value => setAttributes({
+            email: value
+          })
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("section", {
+      ...blockProps,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "hawthorn-contact-section__inner",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
+          tagName: "h1",
+          className: "hawthorn-contact-section__heading has-hero-font-size",
+          value: heading,
+          allowedFormats: [],
+          onChange: value => setAttributes({
+            heading: value
+          }),
+          placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Add a heading…', 'hawthorn')
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "hawthorn-contact-section__content",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
+            tagName: "p",
+            className: "hawthorn-contact-section__intro has-sm-font-size",
+            value: intro,
+            allowedFormats: ['core/bold', 'core/italic', 'core/link'],
+            onChange: value => setAttributes({
+              intro: value
+            }),
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Add introductory text…', 'hawthorn')
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "wpcf7 hawthorn-contact-section__form-preview",
+            "aria-hidden": "true",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("label", {
+                  htmlFor: `${previewId}-name`,
+                  children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Your name', 'hawthorn'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+                    id: `${previewId}-name`,
+                    type: "text",
+                    disabled: true
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("label", {
+                  htmlFor: `${previewId}-email`,
+                  children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Your email', 'hawthorn'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+                    id: `${previewId}-email`,
+                    type: "email",
+                    disabled: true
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("label", {
+                  htmlFor: `${previewId}-subject`,
+                  children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Subject', 'hawthorn'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+                    id: `${previewId}-subject`,
+                    type: "text",
+                    disabled: true
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("label", {
+                  htmlFor: `${previewId}-message`,
+                  children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Your message (optional)', 'hawthorn'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
+                    id: `${previewId}-message`,
+                    rows: "10",
+                    disabled: true
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+                  className: "wpcf7-submit",
+                  type: "submit",
+                  value: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Submit', 'hawthorn'),
+                  disabled: true
+                })
+              })]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
+            tagName: "p",
+            className: "hawthorn-contact-section__direct has-sm-font-size",
+            value: directPrompt,
+            allowedFormats: [],
+            onChange: value => setAttributes({
+              directPrompt: value
+            }),
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Add a direct contact prompt…', 'hawthorn')
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+            className: "hawthorn-contact-section__email has-sm-font-size",
+            children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Email:', 'hawthorn'), ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
+              children: email
+            })]
+          })]
+        })]
+      })
+    })]
+  });
+}
+
+/***/ },
+
+/***/ "./src/blocks/contact-section/index.js"
+/*!*********************************************!*\
+  !*** ./src/blocks/contact-section/index.js ***!
+  \*********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./block.json */ "./src/blocks/contact-section/block.json");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/blocks/contact-section/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/blocks/contact-section/save.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/contact-section/style.scss");
+
+
+
+
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_1__.name, {
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
+  save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
+});
+
+/***/ },
+
+/***/ "./src/blocks/contact-section/save.js"
+/*!********************************************!*\
+  !*** ./src/blocks/contact-section/save.js ***!
+  \********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ save)
+/* harmony export */ });
+function save() {
+  return null;
+}
+
+/***/ },
+
+/***/ "./src/blocks/contact-section/editor.scss"
+/*!************************************************!*\
+  !*** ./src/blocks/contact-section/editor.scss ***!
+  \************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./src/blocks/contact-section/style.scss"
+/*!***********************************************!*\
+  !*** ./src/blocks/contact-section/style.scss ***!
+  \***********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "react/jsx-runtime"
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+(module) {
+
+module.exports = window["ReactJSXRuntime"];
+
+/***/ },
+
+/***/ "@wordpress/block-editor"
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+(module) {
+
+module.exports = window["wp"]["blockEditor"];
+
+/***/ },
+
+/***/ "@wordpress/blocks"
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+(module) {
+
+module.exports = window["wp"]["blocks"];
+
+/***/ },
+
+/***/ "@wordpress/components"
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+(module) {
+
+module.exports = window["wp"]["components"];
+
+/***/ },
+
+/***/ "@wordpress/i18n"
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+(module) {
+
+module.exports = window["wp"]["i18n"];
+
+/***/ },
+
+/***/ "./src/blocks/contact-section/block.json"
+/*!***********************************************!*\
+  !*** ./src/blocks/contact-section/block.json ***!
+  \***********************************************/
+(module) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"hawthorn/contact-section","version":"1.0.0","title":"Contact Section","category":"design","icon":"email-alt","description":"A complete contact section with editable copy and a Contact Form 7 form.","keywords":["contact","form","email"],"textdomain":"hawthorn","attributes":{"align":{"type":"string","default":"full"},"heading":{"type":"string","default":"Contact","role":"content"},"intro":{"type":"string","default":"Complete the form below or get in touch directly by email or phone, and I’ll get back to you as soon as I can.","role":"content"},"formId":{"type":"string","default":"07c568a"},"formTitle":{"type":"string","default":"Contact form 1"},"directPrompt":{"type":"string","default":"Prefer to get in touch directly?","role":"content"},"email":{"type":"string","default":"annemarie@hawthornpsychology.com","role":"content"}},"supports":{"align":["full"],"anchor":true,"color":false,"customClassName":false,"html":false,"spacing":false},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+
+/***/ }
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	const __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		if (!(moduleId in __webpack_modules__)) {
+/******/ 			delete __webpack_module_cache__[moduleId];
+/******/ 			const e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
+/******/ 		}
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		const deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority ||= 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			let notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				let [chunkIds, fn, priority] = deferred[i];
+/******/ 				let fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if (((priority & 1) === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					const r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = (module) => {
+/******/ 		const getter = module && module.__esModule ?
+/******/ 			() => (module['default']) :
+/******/ 			() => (module);
+/******/ 		__webpack_require__.d(getter, { a: getter });
+/******/ 		return getter;
+/******/ 	};
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	// define getter/value functions for harmony exports
+/******/ 	__webpack_require__.d = (exports, definition) => {
+/******/ 		for(var key in definition) {
+/******/ 			if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	__webpack_require__.o = (obj, prop) => (Object.hasOwn(obj, prop));
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = (exports) => {
+/******/ 		Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		const installedChunks = {
+/******/ 			"blocks/contact-section/index": 0,
+/******/ 			"blocks/contact-section/style-index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		const webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			let [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		const chunkLoadingGlobal = globalThis["webpackChunkhawthorn"] ||= [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	let __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/contact-section/style-index"], () => (__webpack_require__("./src/blocks/contact-section/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=index.js.map
